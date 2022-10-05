@@ -23,10 +23,10 @@ describe('root', () => {
             .get('/api/hello')
             .expect(200)
             .then((res) => {
-                expect(res.body).toEqual({ hello: 'goodbye' });
+                expect(res.body).toEqual({ hello: 'goodbye', commitToForceDeployment: true });
                 done();
             }).catch(err => done(err));;
-    });    
+    });
     it('request invalid path, returns 404', async (done) => {
 
         const app = await create();

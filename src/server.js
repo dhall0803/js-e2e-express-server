@@ -9,13 +9,13 @@ const create = async () => {
     // server
     const app = express();
     app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
-    
+
     // Log request
     app.use(utils.appLogger);
 
     // root route - serve static file
     app.get('/api/hello', (req, res) => {
-        res.json({hello: 'goodbye'});
+        res.json({ hello: 'goodbye', commitToForceDeployment: true });
         res.end();
     });
 

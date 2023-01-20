@@ -13,7 +13,7 @@ variables:
   - group: MyNiceVars
 
 steps:
-  - script: "echo \"Test: $test\""
+  - script: "echo \"Test: $TEST\""
     env:
       TEST: $(test)
 
